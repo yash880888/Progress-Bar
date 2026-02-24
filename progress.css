@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 480px;
+  margin-top: 300px;
+  /* background-color: #ef1212; */
+}
+
+.circle {
+  border: 5px solid grey (6, 255, 172);
+  border-radius: 50%;
+  padding: 10px;
+  background-color: black;
+  z-index: 2;
+    transition: border-color 0.3s ease; 
+}
+
+.circle.active {
+  border-color: grey(27, 255, 6);
+  border:5px solid green;
+  border-color:green;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.btn {
+  border-radius: 625rem;
+  padding: 10px 25px;
+  background-color: blueviolet;
+  color: white;
+}
+
+.num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.num::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  width: 88%;
+  height: 4px;
+  background-color: gray;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  height: 4px;
+  background-color: green;
+  width: 0%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: width 0.4s ease-in-out;
+}
+
